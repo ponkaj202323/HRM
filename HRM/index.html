@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Enterprise HRM</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="assets/css/style.css">
+
+</head>
+
+<body class="bg-light">
+
+<header class="hrm-header shadow-sm">
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                Enterprise HRM
+            </a>
+
+            <div class="ms-auto d-flex align-items-center gap-3">
+
+                <button class="btn btn-light position-relative">
+                    <i class="bi bi-bell"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        5
+                    </span>
+                </button>
+
+                <button class="btn btn-light">
+                    <i class="bi bi-gear"></i>
+                </button>
+
+                <img src="assets/images/avatar-placeholder.png"
+                     class="rounded-circle"
+                     width="40"
+                     height="40"
+                     alt="User">
+
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<main class="container-fluid py-4">
+
+<div class="row">
+
+<!-- =========================
+LEFT SIDEBAR
+========================== -->
+
+<aside class="col-lg-3 mb-4">
+
+<div class="card border-0 shadow-sm">
+
+<div class="card-body">
+
+<div class="profile-area text-center">
+
+<div class="avatar-box mb-3">
+
+<img src="assets/images/avatar-placeholder.png"
+class="img-fluid rounded-circle"
+alt="Avatar">
+
+</div>
+
+<h5 class="fw-bold">
+Employee Name
+</h5>
+
+<p class="text-muted mb-4">
+Software Engineer
+</p>
+
+<div class="d-grid gap-2">
+
+<button class="btn btn-primary">
+
+<i class="bi bi-upload"></i>
+
+Upload Image
+
+</button>
+
+<button class="btn btn-outline-primary">
+
+<i class="bi bi-camera-video"></i>
+
+Capture From Webcam
+
+</button>
+
+</div>
+
+</div>
+
+<hr>
+
+<h6 class="fw-bold mb-3">
+
+Search Employee
+
+</h6>
+
+<select class="form-select mb-3">
+
+<option>Select Search Type</option>
+
+<option>ID</option>
+
+<option>Name</option>
+
+<option>Contact</option>
+
+</select>
+
+<div class="input-group">
+
+<input
+type="text"
+class="form-control"
+placeholder="Use Multi Search Window">
+
+<button class="btn btn-primary">
+
+<i class="bi bi-search"></i>
+
+</button>
+
+<button class="btn btn-secondary">
+
+<i class="bi bi-arrow-repeat"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</aside>
+
+<!-- ======================
+RIGHT CONTENT
+======================= -->
+
+<section class="col-lg-9">
+
+<div class="accordion" id="employeeAccordion">
+
+<!-- Personal Information -->
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button
+class="accordion-button"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#personal">
+
+Personal Profile
+
+</button>
+
+</h2>
+
+<div
+id="personal"
+class="accordion-collapse collapse show"
+data-bs-parent="#employeeAccordion">
+
+<div class="accordion-body">
+
+<form>
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+Employee Name
+
+</label>
+
+<input
+type="text"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+Employee Name Bangla
+
+</label>
+
+<input
+type="text"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+Contact Number
+
+</label>
+
+<input
+type="tel"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+Father's Name
+
+</label>
+
+<input
+type="text"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+Mother's Name
+
+</label>
+
+<input
+type="text"
+class="form-control">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+
+Spouse Name
+
+</label>
+
+<input
+type="text"
+class="form-control">
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+<!-- =========================================
+IDENTITY & DEMOGRAPHICS
+========================================= -->
+
+<div class="accordion-item">
+
+    <h2 class="accordion-header">
+
+        <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#identityPanel">
+
+            <i class="bi bi-person-vcard me-2"></i>
+
+            Identity & Demographics
+
+        </button>
+
+    </h2>
+
+    <div
+        id="identityPanel"
+        class="accordion-collapse collapse"
+        data-bs-parent="#employeeAccordion">
+
+        <div class="accordion-body">
+
+            <div class="row g-3">
+
+                <div class="col-lg-4 col-md-6">
+
+                    <label class="form-label">
+
+                        Date of Birth
+
+                    </label>
+
+                    <input
+                        type="date"
+                        class="form-control">
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <label class="form-label">
+
+                        Blood Group
+
+                    </label>
+
+                    <select class="form-select">
+
+                        <option>Select</option>
+
+                        <option>A+</option>
+                        <option>A-</option>
+
+                        <option>B+</option>
+                        <option>B-</option>
+
+                        <option>AB+</option>
+                        <option>AB-</option>
+
+                        <option>O+</option>
+                        <option>O-</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <label class="form-label">
+
+                        Gender
+
+                    </label>
+
+                    <select class="form-select">
+
+                        <option>Select</option>
+
+                        <option>Male</option>
+
+                        <option>Female</option>
+
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <label class="form-label">
+
+                        Religion
+
+                    </label>
+
+                    <select class="form-select">
+
+                        <option>Select</option>
+
+                        <option>Islam</option>
+
+                        <option>Hinduism</option>
+
+                        <option>Christianity</option>
+
+                        <option>Buddhism</option>
+
+                        <option>Others</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <label class="form-label d-block">
+
+                        Married
+
+                    </label>
+
+                    <div class="form-check form-check-inline">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="married">
+
+                        <label class="form-check-label">
+
+                            Yes
+
+                        </label>
+
+                    </div>
+
+                    <div class="form-check form-check-inline">
+
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="married"
+                            checked>
+
+                        <label class="form-check-label">
+
+                            No
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <label class="form-label">
+
+                        NID / BRC
+
+                    </label>
+
+                    <input
+                        id="nidInput"
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter NID or BRC">
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <label class="form-label">
+
+                        Nationality
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        value="Bangladeshi">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================================
+PERMANENT ADDRESS
+========================================= -->
+
+<div class="accordion-item">
+
+    <h2 class="accordion-header">
+
+        <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#addressPanel">
+
+            <i class="bi bi-geo-alt me-2"></i>
+
+            Permanent Address
+
+        </button>
+
+    </h2>
+
+    <div
+        id="addressPanel"
+        class="accordion-collapse collapse"
+        data-bs-parent="#employeeAccordion">
+
+        <div class="accordion-body">
+
+            <div class="row g-3">
+
+                <div class="col-12">
+
+                    <label class="form-label">
+
+                        Permanent Address
+
+                    </label>
+
+                    
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <label class="form-label">
+
+                        Village
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control">
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <label class="form-label">
+
+                        Post Office
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control">
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <label class="form-label">
+
+                        Police Station
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control">
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <label class="form-label">
+
+                        District
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================================
+NOMINEE INFORMATION
+========================================= -->
+
+<div class="accordion-item">
+
+    <h2 class="accordion-header">
+
+        <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nomineePanel">
+
+            <i class="bi bi-people me-2"></i>
+
+            Nominee Information
+
+        </button>
+
+    </h2>
+
+    <div
+        id="nomineePanel"
+        class="accordion-collapse collapse"
+        data-bs-parent="#employeeAccordion">
+
+        <div class="accordion-body">
+
+            <div class="row g-3">
+
+                <div class="col-lg-4">
+
+                    <label class="form-label">
+
+                        Nominee Name
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control">
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <label class="form-label">
+
+                        Contact Number
+
+                    </label>
+
+                    <input
+                        type="tel"
+                        class="form-control">
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <label class="form-label">
+
+                        Date of Birth
+
+                    </label>
+
+                    <input
+                        type="date"
+                        class="form-control">
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <label class="form-label">
+
+                        Nominee Picture
+
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="file">
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <label class="form-label">
+
+                        District
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control">
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <label class="form-label">
+
+                        Village
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control">
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <label class="form-label">
+
+                        Post Office
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control">
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <label class="form-label">
+
+                        Police Station
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+<!-- =========================================
+FORM ACTION BAR
+========================================= -->
+
+<div class="card shadow-sm border-0 mt-4">
+
+    <div class="card-body">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <small class="text-muted">
+
+                    Last Updated :
+                    <strong>Auto Generated</strong>
+
+                </small>
+
+            </div>
+
+            <div class="col-lg-6 text-lg-end mt-3 mt-lg-0">
+
+                <button
+                    type="reset"
+                    class="btn btn-outline-secondary me-2">
+
+                    <i class="bi bi-arrow-counterclockwise"></i>
+
+                    Reset
+
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-outline-danger me-2">
+
+                    <i class="bi bi-trash"></i>
+
+                    Delete
+
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-outline-info me-2">
+
+                    <i class="bi bi-printer"></i>
+
+                    Print
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    <i class="bi bi-check-circle"></i>
+
+                    Save Employee
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
